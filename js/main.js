@@ -19,6 +19,7 @@ document.forms[0].onsubmit=function(e){
     if(fUserValid===false||lUserValid===false||emailValid===false){
         e.preventDefault();
     }
+    alert("You have successfully registered")
 
 }
 // document.querySelector(".button").onclick=(e)=>{
