@@ -1,26 +1,26 @@
-
-let userInput=document.querySelector("[name=username]");
-let ageInput=document.querySelector("[name=age]");
-const z="www.google.com";
+let firstNameInput=document.querySelector("[name=firstName]");
+let lastNameInput=document.querySelector("[name=lastName]");
+let emailInput=document.querySelector(".Email");
 document.forms[0].onsubmit=function(e){
-    let userValid=false;
-    let ageValid=false;
-
-
-    if(userInput.value!=="" && userInput.value.length<=10){
-        userValid=true;
+    let fUserValid=false;
+    let lUserValid=false;
+    let emailValid=false;
+    
+    if(firstNameInput.value!=="" && firstNameInput.value.length<=10){
+        fUserValid=true;
     }
-    if(ageInput.value!==""){
-        ageValid=true;
+    if(lastNameInput.value!=="" && lastNameInput.value.length<=10){
+        lUserValid=true;
+    }
+    if(emailInput.value!==""&& emailInput.value.includes("@")&&emailInput.value.includes(".")){
+        emailValid=true;
     }
 
-    if(userValid===false||ageValid===false){
+    if(fUserValid===false||lUserValid===false||emailValid===false){
         e.preventDefault();
     }
-    window.location.href=z;
 
 }
-document.links[0].onclick=function (e){
-    e.preventDefault();
-    
-}
+// document.querySelector(".button").onclick=(e)=>{
+//     e.preventDefault();
+// }
